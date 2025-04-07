@@ -6,7 +6,7 @@ namespace WitchPlanner
 {
     public partial class Form1 : Form
     {
-        private List<Client> clients = new List<Client>();
+        private readonly List<Client> clients = [];
         public Form1()
         {
             InitializeComponent();
@@ -19,17 +19,21 @@ namespace WitchPlanner
             dataGridViewClients.Columns.Add("Name", "Имя");
         }
 
-        private void buttonRecord_Click(object sender, EventArgs e)
+        private void ButtonRecord_Click(object sender, EventArgs e)
         {
-            string clientName = textBoxClientName.Text.Trim();
+            string? clientName = textBoxClientName.Text.Trim();
 
             if (!string.IsNullOrEmpty(clientName))
             {
-                Client newClient = new Client(clientName);
+                var newClient = new Client()
+                {
+                    Name = clientName,
+                    Date = DateTime.Now.ToString("dd.MM.yyyy")
+                };
                 clients.Add(newClient);
 
                 // Добавляем клиента в DataGridView
-                dataGridViewClients.Rows.Add(newClient.Date.ToString(), newClient.Name);
+                dataGridViewClients.Rows.Add(newClient.Date!, newClient.Name!);
 
                 // Очищаем текстовое поле
                 textBoxClientName.Clear();

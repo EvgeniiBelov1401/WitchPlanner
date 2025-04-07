@@ -69,7 +69,7 @@
             buttonRecord.TabIndex = 1;
             buttonRecord.Text = "Записать";
             buttonRecord.UseVisualStyleBackColor = true;
-            buttonRecord.Click += buttonRecord_Click;
+            buttonRecord.Click += ButtonRecord_Click;
             // 
             // groupClientNameBox
             // 
@@ -85,7 +85,7 @@
             // 
             // textBoxClientName
             // 
-            textBoxClientName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxClientName.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             textBoxClientName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 178);
             textBoxClientName.Location = new Point(16, 40);
             textBoxClientName.Name = "textBoxClientName";

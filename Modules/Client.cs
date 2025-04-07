@@ -8,14 +8,13 @@ namespace WitchPlanner.Modules
 {
     public class Client
     {
-        public DateTime? Date { get; set; }
         public string? Name { get; set; }
-        
+        public string? Date { get; set; }
 
-        public Client(string name)
+
+        public Client()
         {
-            this.Date = DateTime.Now;
-            this.Name = name;
+
         }
     }
 }

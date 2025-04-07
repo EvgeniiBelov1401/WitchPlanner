@@ -8,6 +8,6 @@ namespace WitchPlanner.Modules
 {
     public class NullInputDataException: Exception
     {
-        public override string? Message { get; } = "Заполните все данные...";
+        public override string Message { get; } = "Заполните все данные...";
     }
 }
